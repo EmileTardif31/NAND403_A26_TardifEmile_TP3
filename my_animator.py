@@ -1,4 +1,2 @@
-print("animator file UAABBAHHBAUBHSBUH")
-
-def printer():
-    print("print animator")
+def create_animation():
+    print("animation created")

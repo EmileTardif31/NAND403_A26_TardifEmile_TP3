@@ -13,10 +13,4 @@ importlib.invalidate_caches() # refresh le check des modules pour mieux reload n
 importlib.reload(my_ui) # reload my_ui
 importlib.reload(my_animator) # reload my_animator
 
-print("----")
-
-my_animator.printer()
-
 my_ui.main()
-
-print("main file functionnal")
