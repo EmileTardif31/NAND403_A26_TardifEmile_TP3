@@ -32,6 +32,8 @@ class RandomAnimationUI(QWidget):
         timing_text = QLabel("Duration (Frames)")
         step_text = QLabel("Step (Frames)")
 
+        global timing_spin
+        global step_spin
         timing_spin = QSpinBox(self)
         step_spin = QSpinBox(self)
         timing_spin.setRange(1, 10)
@@ -64,6 +66,12 @@ class RandomAnimationUI(QWidget):
         translate_maxy = QLabel("max y")
         translate_maxz = QLabel("max z")
 
+        global translate_spin_minx
+        global translate_spin_miny
+        global translate_spin_minz
+        global translate_spin_maxx
+        global translate_spin_maxy
+        global translate_spin_maxz
         translate_spin_minx = QSpinBox(self)
         translate_spin_miny = QSpinBox(self)
         translate_spin_minz = QSpinBox(self)
@@ -127,6 +135,12 @@ class RandomAnimationUI(QWidget):
         rotate_maxy = QLabel("max y")
         rotate_maxz = QLabel("max z")
 
+        global rotate_spin_minx
+        global rotate_spin_miny
+        global rotate_spin_minz
+        global rotate_spin_maxx
+        global rotate_spin_maxy
+        global rotate_spin_maxz
         rotate_spin_minx = QSpinBox(self)
         rotate_spin_miny = QSpinBox(self)
         rotate_spin_minz = QSpinBox(self)
@@ -189,6 +203,12 @@ class RandomAnimationUI(QWidget):
         scale_maxy = QLabel("max y")
         scale_maxz = QLabel("max z")
 
+        global scale_spin_minx
+        global scale_spin_miny
+        global scale_spin_minz
+        global scale_spin_maxx
+        global scale_spin_maxy
+        global scale_spin_maxz
         scale_spin_minx = QSpinBox(self)
         scale_spin_miny = QSpinBox(self)
         scale_spin_minz = QSpinBox(self)
@@ -239,7 +259,28 @@ class RandomAnimationUI(QWidget):
         button.clicked.connect(self.on_click)
    
     def on_click(self):
-        my_animator.create_animation()
+        my_animator.create_animation(
+            timing_spin,
+            step_spin,
+            translate_spin_minx,
+            translate_spin_miny,
+            translate_spin_minz,
+            translate_spin_maxx,
+            translate_spin_maxy,
+            translate_spin_maxz,
+            rotate_spin_minx,
+            rotate_spin_miny,
+            rotate_spin_minz,
+            rotate_spin_maxx,
+            rotate_spin_maxy,
+            rotate_spin_maxz,
+            scale_spin_minx,
+            scale_spin_miny,
+            scale_spin_minz,
+            scale_spin_maxx,
+            scale_spin_maxy,
+            scale_spin_maxz
+        )
    
  
 def main():
