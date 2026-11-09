@@ -260,26 +260,26 @@ class RandomAnimationUI(QWidget):
    
     def on_click(self):
         my_animator.create_animation(
-            timing_spin,
-            step_spin,
-            translate_spin_minx,
-            translate_spin_miny,
-            translate_spin_minz,
-            translate_spin_maxx,
-            translate_spin_maxy,
-            translate_spin_maxz,
-            rotate_spin_minx,
-            rotate_spin_miny,
-            rotate_spin_minz,
-            rotate_spin_maxx,
-            rotate_spin_maxy,
-            rotate_spin_maxz,
-            scale_spin_minx,
-            scale_spin_miny,
-            scale_spin_minz,
-            scale_spin_maxx,
-            scale_spin_maxy,
-            scale_spin_maxz
+            timing_spin.value(),
+            step_spin.value(),
+            translate_spin_minx.value(),
+            translate_spin_miny.value(),
+            translate_spin_minz.value(),
+            translate_spin_maxx.value(),
+            translate_spin_maxy.value(),
+            translate_spin_maxz.value(),
+            rotate_spin_minx.value(),
+            rotate_spin_miny.value(),
+            rotate_spin_minz.value(),
+            rotate_spin_maxx.value(),
+            rotate_spin_maxy.value(),
+            rotate_spin_maxz.value(),
+            scale_spin_minx.value(),
+            scale_spin_miny.value(),
+            scale_spin_minz.value(),
+            scale_spin_maxx.value(),
+            scale_spin_maxy.value(),
+            scale_spin_maxz.value()
         )
    
  
