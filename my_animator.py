@@ -25,7 +25,7 @@ def create_animation(
 ):
     selected_obj = cmds.ls(selection=True, objectsOnly=True) # get tous les objets sélectionnés
 
-    # reset la timeline pour loop mon animation
+    # reset la timeline pour loop l'animation
     cmds.currentTime(1)
     cmds.playbackOptions(minTime=1, maxTime=timing_spin)
     cmds.playbackOptions(animationStartTime=1, animationEndTime=timing_spin)
