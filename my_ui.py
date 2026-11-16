@@ -12,10 +12,19 @@ importlib.invalidate_caches() # refresh le check des modules pour mieux reload n
 importlib.reload(my_animator) # reload my_animator
 
 from PySide6.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout, QFormLayout, QPushButton, QMessageBox, QGroupBox, QSpinBox
+from PySide6.QtCore import Qt
+
+import maya.OpenMayaUI as omui
+from shiboken6 import wrapInstance
+
+def maya_main_window():
+    pointer = omui.MQtUtil.mainWindow()
+    return wrapInstance(int(pointer), QWidget)
  
 class RandomAnimationUI(QWidget):
     def __init__(self): # Constructeur
-        super().__init__() # Constructeur QWidget
+        super().__init__(maya_main_window()) # Constructeur QWidget
+        self.setWindowFlags(Qt.Window)
         self.setWindowTitle("Random Animation Generator")
         self.setFixedWidth(400)
         self.create_ui()
