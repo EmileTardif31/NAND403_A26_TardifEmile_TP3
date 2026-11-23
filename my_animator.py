@@ -43,9 +43,6 @@ def create_animation(
 
     for i in selected_obj:
 
-        # reset les clés d'animations
-        cmds.cutKey(i, clear=True)
-
         # --- set frame 1 keys ---
         # get la position initiale
         init_positionX = cmds.getAttr(i + ".translateX")
@@ -57,6 +54,9 @@ def create_animation(
         init_scaleX = cmds.getAttr(i + ".scaleX")
         init_scaleY = cmds.getAttr(i + ".scaleY")
         init_scaleZ = cmds.getAttr(i + ".scaleZ")
+
+        # reset les clés d'animations
+        cmds.cutKey(i, clear=True)
 
         #set la 1ere et derniere comme les transformations initiales de l'objet
         for frame in [1, timing_spin]:
